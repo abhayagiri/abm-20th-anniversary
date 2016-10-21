@@ -17,8 +17,6 @@ import yaml from 'js-yaml'
 import { addAudioTasks } from './tasks/audio'
 import { addPhotosTasks } from './tasks/photos'
 
-const deployPath = 'abhayagiri@twokilts.dreamhost.com:www.abhayagiri.org/shared/public/media/discs/Abhayagiri\\\'s\\ 20th\\ Anniversary/'
-
 const sassOptions = {
   errLogToConsole: true,
   outputStyle: 'expanded'
@@ -116,7 +114,60 @@ gulp.task('watch', () => {
 
 gulp.task('default', gulp.series('compile', 'watch'))
 
+/*
+ * Shell tasks
+ */
+
+
+function system(cmd, args) {
+  let log = `exec: ${cmd}`;
+  if (args) {
+    log += ' ' + args.join(' ')
+  }
+  console.log(log)
+  if (args) {
+    child_process.execFileSync(cmd, args, {stdio: 'inherit'})
+  } else {
+    child_process.execSync(cmd, {stdio: 'inherit'})
+  }
+}
+
+function deployDest(type) {
+  try {
+    let m = require('./deploy')
+    return m[type + 'Dest']
+  } catch (e) {
+    throw "deploy.js not defined"
+  }
+}
+
+function rsyncOptions() {
+  let options = ['--itemize-changes', '--exclude=.DS_Store']
+  if (process.argv.indexOf('-n') >= 0 ||
+      process.argv.indexOf('--dry-run') >= 0) {
+    options.push('--dry-run')
+  }
+  return options
+}
+
+gulp.task('deploy-server', (callback) => {
+  system('rsync', rsyncOptions().concat([
+    '-avz', '--rsh=ssh',
+    'dist/', deployDest('server')
+  ]))
+  callback()
+})
+
+gulp.task('deploy-backup', (callback) => {
+  system('rsync', rsyncOptions().concat([
+    '-rvz', '--delete',
+    '--no-links', '--times', '--modify-window=1',
+    'dist/', deployDest('backup')
+  ]))
+  callback()
+})
+
 gulp.task('clean-junk', (callback) => {
-  const cmd = 'find . -name ".DS_Store" -print -exec rm -f {} \\;'
-  shell.exec(cmd, {}, callback)
+  system('find . -name .DS_Store -print -exec rm -f {} \\;')
+  callback()
 })

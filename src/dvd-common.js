@@ -1,4 +1,4 @@
-const assetStamp = '1477007176'
+const assetStamp = '1477087465'
 
 const template = `
   <header id="intro-carousel" class="carousel slide">

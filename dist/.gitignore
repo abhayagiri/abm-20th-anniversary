@@ -5,3 +5,5 @@
 !DVD/Web
 !DVD/Web/loader.*
 !DVD/index.html
+!img
+!img/*
