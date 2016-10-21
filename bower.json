@@ -1,0 +1,27 @@
+{
+  "name": "abm-20th-anniversary",
+  "description": "Abhayagiri's 20th Anniversary Compilation",
+  "main": "gulpfile.babel.js",
+  "authors": [
+    "ABM Devmonk <devmonk@abhayagiri.org>"
+  ],
+  "license": "ISC",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^2.2.4",
+    "hallooou": "https://github.com/mauritiusdsilva/hallooou-HTML5-responsive-template.git",
+    "jPlayer": "jplayer#^2.9.2",
+    "jsrender": "^0.9.76",
+    "slick-carousel": "^1.6.0",
+    "jq-fullscreen": "^0.5.0",
+    "lightgallery": "=1.2.19",
+    "pdfobject": "pdfobject2#*"
+  }
+}

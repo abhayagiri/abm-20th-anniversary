@@ -1,0 +1,13 @@
+#photos {
+  background:
+    linear-gradient(
+      rgba($monk-light-brown, 0.9),
+      rgba($monk-light-brown, 0.9)
+    ),
+    url('../DVD/Web/img/large/2007-2016/04%20Other%20Events/03%20Vesakha%20by%20Candlelight.JPG');
+  background-size: cover;
+}
+
+.lg-outer .lg-thumb-item img {
+  object-fit: cover;
+}

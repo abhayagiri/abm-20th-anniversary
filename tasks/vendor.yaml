@@ -1,0 +1,23 @@
+css:
+  - dist/vendor/hallooou/assets/css/bootstrap.min.css
+  - dist/vendor/hallooou/assets/css/hallooou.css
+  - dist/vendor/hallooou/assets/css/colors.css
+  - dist/vendor/hallooou/assets/css/font-awesome.min.css
+  - dist/vendor/hallooou/assets/css/plugins/magnific-popup.css
+  - dist/vendor/slick-carousel/slick/slick.css
+  - dist/vendor/slick-carousel/slick/slick-theme.css
+  - dist/vendor/lightgallery/dist/css/lightgallery.min.css
+  - dist/vendor/jPlayer/dist/skin/blue.monday/css/jplayer.blue.monday.min.css
+js:
+  - dist/vendor/jquery/dist/jquery.min.js
+  - dist/vendor/jsrender/jsrender.min.js
+  - dist/vendor/slick-carousel/slick/slick.min.js
+  - dist/vendor/jq-fullscreen/release/jquery.fullscreen.min.js
+  - dist/vendor/lightgallery/dist/js/lightgallery.min.js
+  - dist/vendor/lightgallery/dist/js/lg-thumbnail.min.js
+  - dist/vendor/lightgallery/dist/js/lg-zoom.min.js
+  - dist/vendor/jPlayer/dist/jplayer/jquery.jplayer.min.js
+  - dist/vendor/hallooou/assets/js/bootstrap.min.js
+  - dist/vendor/hallooou/assets/js/plugins/jquery.easing.min.js
+  - dist/vendor/hallooou/assets/js/plugins/jquery.magnific-popup.min.js
+  - dist/vendor/pdfobject/pdfobject.min.js

@@ -1,0 +1,24 @@
+.slide {
+
+  &.cover {
+    background-color: rgb(255, 204, 153);
+    .caption {
+      font-family: serif;
+      font-style: italic;
+      text-align: center;
+    }
+  }
+
+  &.image, &.image-with-caption {
+    background-color: black;
+  }
+
+  &.image-with-caption {
+    .caption {
+      font-family: sans-serif;
+      color: white;
+      text-align: center;
+    }
+  }
+
+}

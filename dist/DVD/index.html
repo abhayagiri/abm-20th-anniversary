@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Abhayagiri Monastery 20th Anniversary Compilation</title>
+    <link rel="stylesheet" href="Web/loader.css">
+  </head>
+  <body>
+    <div id="loader">
+      <div class='uil-ripple-css' style='transform:scale(1);'><div></div></div>
+      <div id="offline-message">
+        No Internet connection detected...
+      </div>
+    </div>
+  </body>
+  <script src="Web/loader.js"></script>
+  <script>
+    if (!navigator.onLine) {
+      document.body.className += ' offline';
+    }
+    var dvdLoaderUrl = 'https://www.abhayagiri.org/20/dvd-2.js';
+    requireJs(dvdLoaderUrl + '?' + new Date().getTime(), function() {
+    });
+  </script>
+</html>

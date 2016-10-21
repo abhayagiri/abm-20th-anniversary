@@ -1,0 +1,11 @@
+.jp-audio, .jp-audio-stream, .jp-video {
+  font-family: serif;
+  border-color: #777;
+}
+
+#jquery-jplayer-container {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  z-index: 10;
+}

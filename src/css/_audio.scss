@@ -1,0 +1,47 @@
+.audio-title {
+
+  display: block;
+  position: relative;
+  margin: 0;
+  padding: .2em 1em;
+
+  transition: background-color .2s linear;
+
+  &:hover {
+    background-color: #ffedd2;
+
+    h4 .download, h4 .listen-icon {
+      color: $monk-brown;
+    }
+  }
+
+  h4 {
+    margin: 0;
+    padding: 0;
+    .title {
+      color: $monk-brown
+    }
+
+    .download, .listen-icon {
+      color: transparent;
+    }
+  }
+
+  .speaker {
+    @media (min-width: 800px) {
+      position: absolute;
+      top: .5em;
+      right: .5em;
+    }
+    font-family: "Raleway", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: 600;
+    color: black;
+  }
+
+  .summary {
+    clear: both;
+    overflow: auto;
+    color: black;
+  }
+
+}

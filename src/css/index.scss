@@ -1,0 +1,29 @@
+$monk-brown: #b98d72;
+$monk-light-brown: lighten($monk-brown, 30%);
+
+@import "audio";
+@import "audio-player";
+
+@import "navbar";
+@import "dhamma-talks";
+@import "photos";
+@import "books";
+@import "ajahn-chah-weekend";
+@import "anniversary";
+@import "download";
+
+#fearless-mountain {
+  background-color: #2c5a71;
+}
+
+.hidden-until-load {
+  transition: opacity 1s linear;
+}
+
+body.loading .hidden-until-load {
+  opacity: 0;
+}
+
+body.loaded .hidden-until-load {
+  opacity: 1;
+}

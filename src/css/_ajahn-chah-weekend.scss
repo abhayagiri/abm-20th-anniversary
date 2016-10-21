@@ -1,0 +1,17 @@
+#ajahn-chah-weekend {
+  background:
+    linear-gradient(
+      rgba(white, 0.8),
+      rgba(white, 0.8)
+    ),
+    url('../DVD/Web/img/large/Ajahn%20Chah%20Weekend/01%20Full%20Stage.jpg');
+  background-size: cover;
+
+  .audio-title {
+    padding: 0em 1em;
+    h4 .title {
+      font-size: 12pt;
+      color: #777;
+    }
+  }
+}
