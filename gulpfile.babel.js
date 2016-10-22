@@ -152,7 +152,7 @@ function rsyncOptions() {
 
 gulp.task('deploy-server', (callback) => {
   system('rsync', rsyncOptions().concat([
-    '-avz', '--rsh=ssh',
+    '-avz', '--rsh=ssh', '--delete',
     'dist/', deployDest('server')
   ]))
   callback()
