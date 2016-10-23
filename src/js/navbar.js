@@ -1,10 +1,4 @@
 addSection('navbar', () => {
-  let fearlessMountainHtml
-  if (_version > 0) {
-    fearlessMountainHtml = `<li><a href="#fearless-mountain">Fearless Mountain</a></li>`
-  } else {
-    fearlessMountainHtml = ''
-  }
   const template = `
     <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
       <div class="container">
@@ -35,7 +29,7 @@ addSection('navbar', () => {
               <li><a href="#photos">Photos</a></li>
               <li><a href="#books">Abundant, Exhaulted, Immeasurable</a></li>
               <li><a href="#ajahn-chah-weekend">Remembering Ajahn Chah Weekend</a></li>
-              ${fearlessMountainHtml}
+              <li><a href="#fearless-mountain">Fearless Mountain</a></li>
               <li><a href="#anniversary">The 20th Anniversary</a></li>
             </ul>
           </nav>
